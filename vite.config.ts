@@ -7,6 +7,9 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Fixa o tipo de servidor do build. Sem isso a Netlify troca para o dela (ou node-server),
+  // cuja saída não tem fetch() e quebra a pré-renderização da página inicial.
+  nitro: { preset: "cloudflare-module" },
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
