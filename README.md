@@ -32,7 +32,7 @@ git push -u origin main
 
 ## Publicar na Netlify
 1. Netlify → **Add new site → Import an existing project** → GitHub → escolha o repositório.
-2. Build command: `npm run build`
+2. Build command: `NITRO_PRESET=node-server npm run build`
 3. Publish directory: `dist/client`
 4. Deploy. (Esses valores já estão em `netlify.toml`.)
 

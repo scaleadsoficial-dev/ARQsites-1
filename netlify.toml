@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "NITRO_PRESET=node-server npm run build"
   publish = "dist/client"
 
 [build.environment]
